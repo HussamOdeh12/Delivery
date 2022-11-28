@@ -1,0 +1,108 @@
+//-------------------------------------------------
+// Start Header
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--body-color);
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+// End Header
+//-------------------------------------------------
+// Start Nav
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+
+  &__menu {
+    @media screen and (max-width: 767px) {
+      position: fixed;
+      background-color: var(--container-color);
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+      padding: 2.5rem;
+      width: 90%;
+      top: -100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transition: 0.5s;
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -o-transition: 0.5s;
+      border-radius: 2rem;
+      -webkit-border-radius: 2rem;
+      -moz-border-radius: 2rem;
+      -ms-border-radius: 2rem;
+      -o-border-radius: 2rem;
+      z-index: var(--z-fixed);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+  }
+
+  &__link,
+  &__logo,
+  &__toggle {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+  }
+
+  &__toggle {
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+}
+
+.show-menu {
+  top: calc(var(--header-height) + 1rem); // 4 rem
+}
+
+// End Nav
+//-------------------------------------------------
+// Start active link
+
+.active-link {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -0.75rem;
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    background-color: var(--title-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+}
+
+// End active link
+//-------------------------------------------------
+// Start change background header
+
+.scroll-header {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+// End change background header
+//-------------------------------------------------

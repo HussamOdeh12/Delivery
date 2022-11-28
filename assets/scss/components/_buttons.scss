@@ -1,0 +1,51 @@
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #1a1a1a;
+  padding: 0.75rem 1.5rem;
+  font-weight: var(--font-semi-bold);
+  transition: 0.3s;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+
+  &:hover {
+    background-color: var(--first-color-alt);
+  }
+
+  &__header {
+    display: none;
+  }
+
+  &-link {
+    background: none;
+    padding: 0.5rem;
+    color: var(--title-color);
+  }
+
+  /*
+  &:hover {
+    background-color: transparent;
+  }
+  */
+
+  &__flex {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.25rem;
+    padding: 0.75rem 1rem;
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+  }
+}
+
+// End Button
+//-------------------------------------------------
